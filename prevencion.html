@@ -1,0 +1,103 @@
+<!-- Inicia la especificacion del tipo de documento como HTML5 -->
+<!DOCTYPE html>
+<!-- Define el idioma español para el contenido textual de la pagina -->
+<html lang="es">
+<head>
+    <!-- Configura la codificacion de caracteres universal UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Optimiza la escala de visualizacion para dispositivos moviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Establece el titulo de la seccion de prevencion en el navegador -->
+    <title>Prevención - Proyecto Educativo RD</title>
+    <!-- Importa los estilos base de la libreria Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Importa la hoja de estilos personalizada del proyecto educativo -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Contenedor general con margenes laterales responsivos -->
+    <div class="container-fluid px-lg-5">
+        <!-- Area de cabecera con logo y menu de navegacion principal -->
+        <header class="navbar-custom d-flex justify-content-between align-items-center">
+            <!-- Boton de activacion del menu para pantallas de tamaño reducido -->
+             <button class="mobile-toggle" aria-label="Menu">
+                <!-- Icono representativo de menu en formato grafico vectorial -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+            <!-- Barra de navegacion con enlaces a todas las secciones del sitio -->
+            <nav class="nav-pill d-none d-lg-flex">
+                <!-- Enlace directo a la pagina de inicio -->
+                <a href="index.html">Inicio</a>
+                <!-- Elemento estetico de separacion entre pestañas -->
+                <span class="text-muted">•</span>
+                <!-- Enlace a la seccion de definiciones y conceptos -->
+                <a href="definicion.html">¿Qué es?</a>
+                <!-- Elemento estetico de separacion entre pestañas -->
+                <span class="text-muted">•</span>
+                <!-- Enlace a la seccion que analiza las causas -->
+                <a href="causas.html">Causas</a>
+                <!-- Elemento estetico de separacion entre pestañas -->
+                <span class="text-muted">•</span>
+                <!-- Enlace a los datos estadisticos de Republica Dominicana -->
+                <a href="rd.html">En RD</a>
+                <!-- Enlace resaltado como activo para la seccion de prevencion -->
+                <a href="prevencion.html" class="active">Prevención</a>
+                <!-- Elemento estetico de separacion entre pestañas -->
+                <span class="text-muted">•</span>
+                <!-- Enlace a la pagina de informacion de contacto -->
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </header>
+
+        <!-- Cabecera de la seccion con titulo de llamado a la accion -->
+        <div class="d-flex justify-content-between align-items-end mb-5">
+            <!-- Titulo descriptivo de la accion inmediata -->
+            <h1 class="display-1 fw-900 m-0" style="font-weight: 900; text-transform: uppercase;">ACTÚA</h1>
+            <!-- Boton para navegar hacia la pagina de contacto y ayuda -->
+            <a href="contacto.html" class="btn btn-light rounded-pill px-4 py-3 fw-800 shadow-sm" style="background: #f1f5f9; font-weight: 800; text-decoration: none; color: black;">
+                CONTACTO <span class="ms-2">→</span>
+            </a>
+        </div>
+
+        <!-- Area principal con cuadricula bento para organizar el contenido informativo -->
+        <main class="bento-grid">
+            <!-- Tarjeta hero de gran tamaño con informacion de contacto de auxilio -->
+            <div class="grid-item hero-card" style="grid-column: span 8; height: 500px;">
+                <!-- Imagen representativa de la red de apoyo y prevencion -->
+                <img src="imagenes/foto1.jpg.jpg" class="full-img" alt="Prevención">
+                <!-- Capa de texto informativa sobrepuesta en la imagen -->
+                <div class="hero-notch">
+                    <div class="ps-5">
+                        <!-- Etiqueta de urgencia o tipo de informacion -->
+                        <span class="text-label">Ayuda . Inmediata</span>
+                        <!-- Titulo principal con el numero de auxilio nacional -->
+                        <h2>LÍNEA DE <br>AUXILIO *212</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta con fondo verde dedicada a señales de advertencia -->
+            <div class="grid-item lime-card" style="grid-column: span 4; background: #ecfdf5; padding: 40px;">
+                <!-- Titulo sobre señales de alerta temprana -->
+                <h3 style="color: #065f46; font-size: 2.2rem;">RED FLAGS</h3>
+                <!-- Lista de comportamientos que indican peligro inminente -->
+                <p class="mt-4 fw-800" style="font-size: 1.1rem;">Celos extremos, control financiero y aislamiento de amistades son señales críticas de peligro.</p>
+                <!-- Detalle informativo final al pie de la tarjeta -->
+                <div class="mt-auto pt-4 border-top">
+                     <!-- Mensaje de concienciacion sobre la accion temprana -->
+                     <p class="small fw-600">No esperes a la violencia física. Actúa ante el primer signo de control.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Pie de pagina centrado con nombre institucional del proyecto -->
+        <footer class="mt-5 pt-5 border-top text-center pb-5">
+            <!-- Texto indicativo del proyecto educativo -->
+            <p class="font-bold fw-800">PROYECTO EDUCATIVO RD</p>
+        </footer>
+    </div>
+    <!-- Carga de la libreria Javascript de Bootstrap para componentes visuales -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Carga del archivo de scripts personalizados del proyecto -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,474 @@
+/* Importa la fuente tipografica Outfit desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap');
+
+/* Define las variables globales de color y estilo del proyecto */
+:root {
+    /* Color verde lima para elementos de accion */
+    --lime-green: #dcfc71;
+    /* Color azul cielo para fondos suaves */
+    --sky-blue: #bae6fd;
+    /* Color lavanda para categorias o acentos */
+    --lavender: #d8b4fe;
+    /* Color azul oscuro para el texto principal */
+    --dark-blue: #0f172a;
+    /* Color gris pizarra para textos secundarios */
+    --slate: #64748b;
+    /* Radio de borde principal para las tarjetas */
+    --radius-main: 50px;
+    /* Configuracion de transiciones suaves para animaciones */
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Define los estilos base para el cuerpo del documento */
+body {
+    /* Establece la fuente principal y asegura legibilidad */
+    font-family: 'Outfit', sans-serif;
+    /* Color de fondo blanco para el sitio */
+    background-color: #ffffff;
+    /* Color de texto predeterminado oscuro */
+    color: var(--dark-blue);
+    /* Espacio inferior para evitar que el contenido toque el borde */
+    padding-bottom: 50px;
+}
+
+/* Configuracion de la barra de navegacion superior */
+.navbar-custom {
+    /* Margen superior para separar del borde superior */
+    padding-top: 30px;
+    /* Margen inferior para separar del contenido principal */
+    margin-bottom: 60px;
+}
+
+/* Estilo del contenedor de navegacion ovalado */
+.nav-pill {
+    /* Fondo blanco para resaltar sobre la pagina */
+    background: #fff;
+    /* Borde sutil para definir la forma */
+    border: 1px solid #f1f5f9;
+    /* Espaciado interno horizontal y vertical */
+    padding: 10px 30px;
+    /* Redondeo completo para forma de pildora */
+    border-radius: 100px;
+    /* Sombra suave para dar profundidad */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    /* Alineacion de elementos en linea horizontal */
+    display: flex;
+    /* Centrado vertical de los elementos internos */
+    align-items: center;
+    /* Espacio entre los elementos del menu */
+    gap: 5px;
+    /* Centrado automatico en el contenedor padre */
+    margin: 0 auto;
+    /* Ajusta el ancho al contenido interno */
+    width: fit-content;
+}
+
+/* Estilo de los enlaces dentro del menu de navegacion */
+.nav-pill a {
+    /* Quita el subrayado predeterminado */
+    text-decoration: none;
+    /* Color de texto gris pizarra */
+    color: var(--slate);
+    /* Peso de fuente seminegrita */
+    font-weight: 500;
+    /* Tamaño de fuente legible */
+    font-size: 0.95rem;
+    /* Espaciado interno para area de clic grande */
+    padding: 10px 18px;
+    /* Redondeo de las esquinas al pasar el mouse */
+    border-radius: 30px;
+    /* Aplica transicion suave a cambios de estilo */
+    transition: var(--transition);
+}
+
+/* Estilo para el enlace activo o al pasar el puntero */
+.nav-pill a.active, .nav-pill a:hover {
+    /* Cambia el texto a azul oscuro */
+    color: var(--dark-blue);
+    /* Fondo gris muy claro para resaltar */
+    background: #f1f5f9;
+}
+
+/* Contenedor de iconos de accion en la navegacion */
+.nav-actions {
+    /* Alineacion flexible de los iconos */
+    display: flex;
+    /* Centrado vertical de los iconos */
+    align-items: center;
+    /* Espacio entre los iconos */
+    gap: 15px;
+    /* Margen interno izquierdo para separacion */
+    padding-left: 20px;
+    /* Margen externo izquierdo */
+    margin-left: 10px;
+    /* Linea divisoria vertical a la izquierda */
+    border-left: 1px solid #e2e8f0;
+}
+
+/* Estilo para el identificador de usuario en el menu */
+.user-pill {
+    /* Fondo gris claro para el acceso */
+    background: #f1f5f9;
+    /* Espaciado interno para forma compacta */
+    padding: 5px 15px 5px 5px;
+    /* Redondeo completo para forma ovalada */
+    border-radius: 100px;
+    /* Alineacion horizontal de imagen y texto */
+    display: flex;
+    /* Centrado vertical interno */
+    align-items: center;
+    /* Espacio entre imagen y texto */
+    gap: 10px;
+}
+
+/* Configuracion del sistema bento grid para el diseño principal */
+.bento-grid {
+    /* Activa el modo cuadricula */
+    display: grid;
+    /* Divide el espacio en 12 columnas iguales */
+    grid-template-columns: repeat(12, 1fr);
+    /* Define la altura minima de las filas */
+    grid-auto-rows: minmax(300px, auto);
+    /* Espacio entre las tarjetas de la cuadricula */
+    gap: 24px;
+}
+
+/* Estilo base para cada elemento de la cuadricula */
+.grid-item {
+    /* Aplica el radio de borde redondeado principal */
+    border-radius: var(--radius-main);
+    /* Oculta el contenido que sobresale de las esquinas */
+    overflow: hidden;
+    /* Posicion relativa para elementos hijos absolutos */
+    position: relative;
+    /* Transicion suave para efectos de interaccion */
+    transition: var(--transition);
+    /* Color de fondo sutil por defecto */
+    background: #f8fafc;
+}
+
+/* Efecto visual al pasar el puntero sobre una tarjeta */
+.grid-item:hover {
+    /* Desplaza la tarjeta ligeramente hacia arriba */
+    transform: translateY(-5px);
+    /* Añade una sombra intensa para efecto de elevacion */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Configuracion especifica para la tarjeta principal hero */
+.hero-card {
+    /* Ocupa 6 columnas de ancho */
+    grid-column: span 6;
+    /* Ocupa 2 filas de alto */
+    grid-row: span 2;
+}
+
+/* Ajuste de imagenes dentro de la tarjeta hero */
+.hero-card img {
+    /* Ocupa todo el ancho disponible */
+    width: 100%;
+    /* Ocupa todo el alto disponible */
+    height: 100%;
+    /* Ajusta la imagen sin deformarla */
+    object-fit: cover;
+}
+
+/* Estilo del area de texto sobre la imagen hero */
+.hero-notch {
+    /* Posicionamiento en el fondo del contenedor */
+    position: absolute;
+    /* Alineado a la base */
+    bottom: 0;
+    /* Alineado a la izquierda */
+    left: 0;
+    /* Fondo blanco solido */
+    background: #fff;
+    /* Espaciado interno para el texto */
+    padding: 40px 60px 50px 0;
+    /* Redondeo pronunciado en la esquina superior derecha */
+    border-top-right-radius: 80px;
+    /* Cubre la mayor parte del ancho */
+    width: 85%;
+    /* Asegura que este sobre la imagen */
+    z-index: 10;
+}
+
+/* Estilo del titulo dentro de la tarjeta hero */
+.hero-notch h2 {
+    /* Tamaño adaptable segun el ancho de pantalla */
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    /* Peso de fuente extra negrita */
+    font-weight: 900;
+    /* Todo el texto en mayusculas */
+    text-transform: uppercase;
+    /* Espaciado de linea estrecho */
+    line-height: 1;
+    /* Margen superior del titulo */
+    margin-top: 15px;
+}
+
+/* Configuracion para la tarjeta de color lima */
+.lime-card {
+    /* Ocupa 3 columnas de ancho */
+    grid-column: span 3;
+    /* Ocupa 1 fila de alto */
+    grid-row: span 1;
+    /* Fondo con el color verde lima definido */
+    background-color: var(--lime-green);
+    /* Espaciado interno generoso */
+    padding: 40px;
+    /* Alineacion vertical de contenido */
+    display: flex;
+    /* Direccion de elementos en columna */
+    flex-direction: column;
+}
+
+/* Estilo del titulo en la tarjeta lima */
+.lime-card h3 {
+    /* Tamaño de fuente grande para titulos */
+    font-size: 2rem;
+    /* Peso de fuente maximo */
+    font-weight: 900;
+    /* Texto en mayusculas */
+    text-transform: uppercase;
+    /* Espacio entre lineas reducido */
+    line-height: 1;
+    /* Margen vertical para separar texto */
+    margin: 20px 0;
+}
+
+/* Contenedor de enlaces en la tarjeta lima */
+.lime-links {
+    /* Empuja los enlaces hacia la parte inferior */
+    margin-top: auto;
+    /* Linea divisoria superior sutil */
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Estilo individual de cada enlace informativo */
+.lime-link {
+    /* Distribucion flexible de texto y flecha */
+    display: flex;
+    /* Separa el texto de la flecha al maximo */
+    justify-content: space-between;
+    /* Centrado vertical de los elementos */
+    align-items: center;
+    /* Espaciado vertical entre enlaces */
+    padding: 15px 0;
+    /* Linea divisoria inferior */
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    /* Quita el subrayado */
+    text-decoration: none;
+    /* Color de texto oscuro para contraste */
+    color: var(--dark-blue);
+    /* Peso de fuente extra negrita */
+    font-weight: 800;
+    /* Tamaño de fuente pequeño */
+    font-size: 0.85rem;
+    /* Mayusculas para estilo moderno */
+    text-transform: uppercase;
+}
+
+/* Configuracion para la tarjeta azul alargada */
+.blue-card {
+    /* Ocupa 3 columnas de ancho */
+    grid-column: span 3;
+    /* Ocupa una fila y media de alto */
+    grid-row: span 1.5;
+    /* Fondo con el color azul cielo definido */
+    background-color: var(--sky-blue);
+    /* Sin espaciado interno directo */
+    padding: 0;
+    /* Disposicion de contenido en columna */
+    display: flex;
+    /* Direccion vertical */
+    flex-direction: column;
+}
+
+/* Area de contenido textual de la tarjeta azul */
+.blue-card-content {
+    /* Espaciado interno para el texto */
+    padding: 40px;
+}
+
+/* Estilo del titulo en la tarjeta azul */
+.blue-card h3 {
+    /* Tamaño especifico para este titulo */
+    font-size: 2.22rem;
+    /* Peso maximo de fuente */
+    font-weight: 900;
+    /* Texto en mayusculas */
+    text-transform: uppercase;
+    /* Ajuste de altura de linea */
+    line-height: 1;
+    /* Margen superior para separacion */
+    margin-top: 20px;
+}
+
+/* Configuracion para la tarjeta de video tutorial */
+.video-card {
+    /* Ocupa 3 columnas de ancho */
+    grid-column: span 3;
+    /* Ocupa 1 fila de alto */
+    grid-row: span 1;
+}
+
+/* Estilo de la capa informativa sobre el video */
+.video-overlay {
+    /* Posicion absoluta en el fondo de la imagen */
+    position: absolute;
+    /* Margen desde la base */
+    bottom: 30px;
+    /* Margen desde la izquierda */
+    left: 30px;
+    /* Color de texto blanco para legibilidad */
+    color: #fff;
+}
+
+/* Configuracion de la tarjeta de categorias y etiquetas */
+.category-card {
+    /* Ocupa 3 columnas de ancho */
+    grid-column: span 3;
+    /* Altura reducida a media fila */
+    grid-row: span 0.5;
+    /* Fondo con el color lavanda definido */
+    background-color: var(--lavender);
+    /* Espaciado interno estandar */
+    padding: 30px;
+    /* Alineacion vertical flexible */
+    display: flex;
+    /* Direccion en columna */
+    flex-direction: column;
+    /* Separa el grupo superior del inferior */
+    justify-content: space-between;
+}
+
+/* Disposicion de etiquetas en nube */
+.tag-cloud {
+    /* Flujo flexible para las etiquetas */
+    display: flex;
+    /* Permite que las etiquetas bajen de linea */
+    flex-wrap: wrap;
+    /* Espacio entre etiquetas */
+    gap: 10px;
+}
+
+/* Estilo individual de cada etiqueta */
+.tag {
+    /* Fondo crema claro para contraste */
+    background: #fef9c3;
+    /* Espaciado interno para forma de boton */
+    padding: 10px 18px;
+    /* Borde redondeado completo */
+    border-radius: 50px;
+    /* Tamaño de fuente reducido */
+    font-size: 0.75rem;
+    /* Peso extra negrita */
+    font-weight: 800;
+}
+
+/* Estilos de utilidad general */
+.text-label {
+    /* Tamaño de letra pequeño para etiquetas informativas */
+    font-size: 0.8rem;
+    /* Peso de fuente negrita */
+    font-weight: 800;
+    /* Color gris pizarra para discrecion */
+    color: var(--slate);
+}
+
+/* Contenedor circular para iconos de navegacion interna */
+.arrow-circle {
+    /* Tamaño fijo de ancho */
+    width: 50px;
+    /* Tamaño fijo de alto */
+    height: 50px;
+    /* Fondo blanco puro */
+    background: #fff;
+    /* Redondeo completo */
+    border-radius: 50%;
+    /* Alineacion central flexible */
+    display: flex;
+    /* Centrado vertical */
+    align-items: center;
+    /* Centrado horizontal */
+    justify-content: center;
+    /* Sombra proyectada suave */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Boton de reproduccion de video tutorial */
+.play-btn {
+    /* Centrado absoluto en el contenedor padre */
+    position: absolute;
+    /* Desde la mitad superior */
+    top: 50%;
+    /* Desde la mitad izquierda */
+    left: 50%;
+    /* Ajuste exacto al centro real */
+    transform: translate(-50%, -50%);
+    /* Ancho del circulo de reproduccion */
+    width: 70px;
+    /* Alto del circulo de reproduccion */
+    height: 70px;
+    /* Fondo blanco translucido */
+    background: rgba(255,255,255,0.4);
+    /* Efecto de desenfoque de fondo */
+    backdrop-filter: blur(10px);
+    /* Redondeo para circulo perfecto */
+    border-radius: 50%;
+    /* Centrado de icono hijo */
+    display: flex;
+    /* Centrado vertical */
+    align-items: center;
+    /* Centrado horizontal */
+    justify-content: center;
+}
+
+/* Utilidad para imagenes que cubren todo su contenedor */
+.full-img {
+    /* Fuerza el ancho completo */
+    width: 100%;
+    /* Fuerza la altura completa */
+    height: 100%;
+    /* Asegura el ajuste sin deformacion */
+    object-fit: cover;
+}
+
+/* Boton oculto por defecto para menu movil */
+.mobile-toggle {
+    /* Oculto en pantallas de escritorio */
+    display: none;
+    /* Sin fondo predeterminado */
+    background: none;
+    /* Sin bordes de boton */
+    border: none;
+    /* Cambia el cursor al pasar por encima */
+    cursor: pointer;
+}
+
+/* Ajustes responsivos para tablets y portatiles medianos */
+@media (max-width: 1200px) {
+    /* Cambia la cuadricula a 6 columnas */
+    .bento-grid { grid-template-columns: repeat(6, 1fr); }
+    /* La tarjeta hero sigue ocupando todo el ancho disponible */
+    .hero-card { grid-column: span 6; }
+    /* Ajusta las tarjetas medianas a la mitad del ancho */
+    .lime-card, .blue-card, .video-card, .category-card { grid-column: span 3; }
+}
+
+/* Ajustes responsivos para telefonos moviles y pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Estilo flotante para el menu movil cuando se despliega */
+    .nav-pill { width: 95%; background: white; border-radius: 20px; position: fixed; top: 10px; left: 2.5%; padding: 10px; display: none; }
+    /* Muestra el menu cuando tiene la clase activa */
+    .nav-pill.show { display: flex; flex-direction: column; }
+    /* Posiciona el boton de menu siempre a la vista */
+    .mobile-toggle { display: block; position: fixed; top: 20px; right: 20px; z-index: 1000; background: white; padding: 10px; border-radius: 50%; }
+    /* Cambia la cuadricula a una sola columna vertical */
+    .bento-grid { grid-template-columns: 1fr; }
+    /* Expande todas las tarjetas al ancho completo de la pantalla */
+    .hero-card, .lime-card, .blue-card, .video-card, .category-card { grid-column: span 1; grid-row: auto; height: auto; min-height: 400px; }
+    /* Elimina el efecto de recorte hero en movil para mejor lectura */
+    .hero-notch { width: 100%; border-radius: 0; padding: 30px; }
+}

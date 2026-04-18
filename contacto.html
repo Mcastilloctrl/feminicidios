@@ -1,0 +1,143 @@
+<!-- Define el estandar del documento como HTML5 -->
+<!DOCTYPE html>
+<!-- Establece el idioma del contenido como español -->
+<html lang="es">
+<head>
+    <!-- Configura la codificacion de caracteres universal -->
+    <meta charset="UTF-8">
+    <!-- Ajusta la escala de visualizacion para dispositivos moviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define el titulo de la seccion de contacto -->
+    <title>Contacto - Proyecto RD</title>
+    <!-- Importa los estilos base de la libreria Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Importa la hoja de estilos personalizada del proyecto -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos especificos para el formulario de contacto premium */
+        .contact-form-premium {
+            /* Utiliza una cuadricula para organizar los campos */
+            display: grid;
+            /* Divide el formulario en dos columnas iguales */
+            grid-template-columns: 1fr 1fr;
+            /* Añade espacio entre los campos del formulario */
+            gap: 20px;
+            /* Asegura que el formulario ocupe todo el ancho disponible */
+            width: 100%;
+        }
+        /* Estilos para los campos de entrada de texto */
+        .input-premium {
+            /* Añade espaciado interno a los campos */
+            padding: 20px;
+            /* Redondea las esquinas de los cuadros de texto */
+            border-radius: 20px;
+            /* Aplica un borde sutil de color gris claro */
+            border: 2px solid #f1f5f9;
+            /* Establece un fondo blanco solido */
+            background: #fff;
+            /* Ajusta el peso de la fuente del texto ingresado */
+            font-weight: 600;
+        }
+        /* Estilos para el boton de envio principal */
+        .btn-premium {
+            /* Hace que el boton ocupe las dos columnas de la cuadricula */
+            grid-column: span 2;
+            /* Añade espaciado interno al boton */
+            padding: 20px;
+            /* Aplica el color azul oscuro definido en las variables */
+            background: var(--dark-blue);
+            /* Establece el color de texto en blanco */
+            color: #fff;
+            /* Redondea las esquinas del boton */
+            border-radius: 20px;
+            /* Elimina el borde predeterminado del boton */
+            border: none;
+            /* Utiliza un peso de fuente maximo para el texto */
+            font-weight: 900;
+            /* Convierte el texto del boton a mayusculas */
+            text-transform: uppercase;
+            /* Aplica la transicion suave definida en el proyecto */
+            transition: var(--transition);
+        }
+        /* Efecto visual al pasar el puntero sobre el boton */
+        .btn-premium:hover {
+            /* Cambia el fondo a negro total */
+            background: #000;
+            /* Aumenta ligeramente el tamaño del boton */
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor general con margenes laterales adaptables -->
+    <div class="container-fluid px-lg-5">
+        <!-- Area de cabecera con navegacion flexible -->
+        <header class="navbar-custom d-flex justify-content-between align-items-center">
+            <!-- Boton de control para el menu en dispositivos moviles -->
+            <button class="mobile-toggle" aria-label="Menu">
+                <!-- Icono de menu en formato grafico vectorial -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+            <!-- Lista de enlaces de navegacion principal del sitio -->
+            <nav class="nav-pill d-none d-lg-flex">
+                <!-- Enlace de retorno a la pagina principal -->
+                <a href="index.html">Inicio</a>
+                <!-- Separador estetico entre los elementos del menu -->
+                <span class="text-muted">•</span>
+                <!-- Enlace a la seccion de conceptos y definiciones -->
+                <a href="definicion.html">¿Qué es?</a>
+                <!-- Separador estetico entre los elementos del menu -->
+                <span class="text-muted">•</span>
+                <!-- Enlace a la seccion sobre factores y causas -->
+                <a href="causas.html">Causas</a>
+                <!-- Separador estetico entre los elementos del menu -->
+                <span class="text-muted">•</span>
+                <!-- Enlace a los datos de Republica Dominicana -->
+                <a href="rd.html">En RD</a>
+                <!-- Separador estetico entre los elementos del menu -->
+                <span class="text-muted">•</span>
+                <!-- Enlace a la seccion de guias de prevencion -->
+                <a href="prevencion.html">Prevención</a>
+                <!-- Enlace resaltado como activo para la seccion de contacto -->
+                <a href="contacto.html" class="active">Contacto</a>
+            </nav>
+        </header>
+
+        <!-- Cabecera de seccion con titulo principal de contacto -->
+        <div class="d-flex justify-content-between align-items-end mb-5">
+            <!-- Titulo de la seccion con estilo de fuente grande -->
+            <h1 class="display-1 fw-900 m-0" style="font-weight: 900; text-transform: uppercase;">CONTACTO</h1>
+        </div>
+
+        <!-- Area principal de contenido con diseño de cuadricula bento -->
+        <main class="bento-grid">
+            <!-- Tarjeta hero que contiene el formulario de contacto principal -->
+            <div class="grid-item hero-card" style="grid-column: span 12; padding: 60px; height: auto;">
+                 <!-- Titulo secundario con mensaje de bienvenida al usuario -->
+                 <h2 class="font-bold mb-4 text-uppercase" style="font-size: 3rem; font-weight: 900;">TE ESCUCHAMOS</h2>
+                 <!-- Formulario interactivo con campos de entrada optimizados -->
+                 <form class="contact-form-premium">
+                    <!-- Campo para el ingreso del nombre del interesado -->
+                    <input type="text" placeholder="Nombre completo" class="input-premium">
+                    <!-- Campo para el ingreso del correo de respuesta -->
+                    <input type="email" placeholder="Correo electrónico" class="input-premium">
+                    <!-- Area de texto para el mensaje detallado o reporte -->
+                    <textarea placeholder="Tu mensaje o reporte..." class="input-premium" style="grid-column: span 2; height: 180px;"></textarea>
+                    <!-- Boton de envio de los datos del formulario -->
+                    <button type="submit" class="btn-premium shadow">ENVIAR AHORA</button>
+                 </form>
+            </div>
+        </main>
+
+        <!-- Pie de pagina centrado con creditos del proyecto educativo -->
+        <footer class="mt-5 pt-5 border-top text-center pb-5">
+            <!-- Texto indicativo institucional del proyecto -->
+            <p class="font-bold fw-800">PROYECTO EDUCATIVO RD</p>
+        </footer>
+    </div>
+    <!-- Carga del bundle de Javascript de Bootstrap para interacciones -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Carga del archivo de logica personalizada del sitio web -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

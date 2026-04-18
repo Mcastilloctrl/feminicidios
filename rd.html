@@ -1,0 +1,105 @@
+<!-- Inicia la definicion del tipo de documento HTML5 -->
+<!DOCTYPE html>
+<!-- Especifica el idioma español para el contenido de la pagina -->
+<html lang="es">
+<head>
+    <!-- Define la codificacion de caracteres universal para el texto -->
+    <meta charset="UTF-8">
+    <!-- Ajusta el escalado inicial para una visualización correcta en moviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Establece el titulo de la pestaña del navegador para esta seccion -->
+    <title>En RD - Proyecto Educativo</title>
+    <!-- Enlace a la hoja de estilos de la libreria Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a los estilos CSS personalizados del sitio -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Contenedor principal con margenes laterales variables segun pantalla -->
+    <div class="container-fluid px-lg-5">
+        <!-- Encabezado de la pagina con logo y navegacion flexible -->
+        <header class="navbar-custom d-flex justify-content-between align-items-center">
+            <!-- Boton de menu desplegable para pantallas de poco ancho -->
+            <button class="mobile-toggle" aria-label="Menu">
+                <!-- Grafico vectorial del icono de menu hamburguesa -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+            <!-- Lista de enlaces de navegacion principal de la aplicacion -->
+            <nav class="nav-pill d-none d-lg-flex">
+                <!-- Enlace hacia la pagina de inicio del sitio -->
+                <a href="index.html">Inicio</a>
+                <!-- Separador estetico entre los elementos del menu -->
+                <span class="text-muted">•</span>
+                <!-- Enlace hacia la seccion de definiciones conceptuales -->
+                <a href="definicion.html">¿Qué es?</a>
+                <!-- Separador estetico entre los elementos del menu -->
+                <span class="text-muted">•</span>
+                <!-- Enlace hacia el analisis de las causas del problema -->
+                <a href="causas.html">Causas</a>
+                <!-- Enlace activo indicando la posicion actual en "En RD" -->
+                <a href="rd.html" class="active">En RD</a>
+                <!-- Separador estetico entre los elementos del menu -->
+                <span class="text-muted">•</span>
+                <!-- Enlace hacia la seccion de guias de prevencion -->
+                <a href="prevencion.html">Prevención</a>
+                <!-- Separador estetico entre los elementos del menu -->
+                <span class="text-muted">•</span>
+                <!-- Enlace hacia la pagina de contacto del proyecto -->
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </header>
+
+        <!-- Cabecera de la seccion con titulo principal y boton de accion lateral -->
+        <div class="d-flex justify-content-between align-items-end mb-5">
+            <!-- Titulo de la seccion sobre estadisticas nacionales -->
+            <h1 class="display-1 fw-900 m-0" style="font-weight: 900; text-transform: uppercase;">CIFRAS RD</h1>
+            <!-- Boton para navegar hacia la proxima seccion de prevencion -->
+            <a href="prevencion.html" class="btn btn-light rounded-pill px-4 py-3 fw-800 shadow-sm" style="background: #f1f5f9; font-weight: 800; text-decoration: none; color: black;">
+                PREVENCIÓN <span class="ms-2">→</span>
+            </a>
+        </div>
+
+        <!-- Area principal de contenido organizada en cuadricula bento -->
+        <main class="bento-grid">
+            <!-- Tarjeta hero que ocupa todo el ancho con imagen de fondo -->
+            <div class="grid-item hero-card" style="grid-column: span 12; height: 500px;">
+                <!-- Imagen representativa de la situacion en Republica Dominicana -->
+                <img src="imagenes/fotord.jpg.jpg" class="full-img" alt="Cifras RD">
+                <!-- Superficie de texto sobrepuesta en la parte inferior de la imagen -->
+                <div class="hero-notch">
+                    <div class="ps-5">
+                        <!-- Etiqueta informativa sobre la naturaleza de los datos -->
+                        <span class="text-label">Estadísticas . Actualizadas</span>
+                        <!-- Titulo principal con cifras de impacto nacional -->
+                        <h2>82 VÍCTIMAS <br>EN 2026</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta informativa sobre las provincias con mas casos -->
+            <div class="grid-item lime-card" style="grid-column: span 6;">
+                <!-- Titulo destacado sobre las zonas de mayor incidencia -->
+                <h3 style="color: #0369a1; font-size: 2.2rem;">PUNTOS CRÍTICOS</h3>
+                <!-- Texto descriptivo de la distribucion geografica de los casos -->
+                <p class="mt-4 fw-800" style="font-size: 1.1rem;">Santo Domingo, Santiago y La Altagracia concentran el 60% de los casos reportados en el territorio nacional.</p>
+            </div>
+             <!-- Tarjeta de alerta informativa sobre servicios de atencion -->
+             <div class="grid-item category-card" style="grid-column: span 6; background: #fef9c3;">
+                <!-- Titulo llamativo sobre la atencion y refugio -->
+                <h3 style="color: #854d0e; font-size: 2.2rem; font-weight: 900; text-transform: uppercase;">ATENCIÓN</h3>
+                <!-- Mensaje sobre el impacto positivo de las casas de acogida -->
+                <p class="mt-4 fw-800" style="font-size: 1.1rem;">Las Casas de Acogida han salvado a más de 500 mujeres en lo que va de año, brindando refugio seguro y apoyo legal.</p>
+            </div>
+        </main>
+
+        <!-- Pie de pagina centrado con informacion del proyecto educativo -->
+        <footer class="mt-5 pt-5 border-top text-center pb-5">
+            <!-- Texto indicativo de la autoria o nombre del proyecto -->
+            <p class="font-bold fw-800">PROYECTO EDUCATIVO RD</p>
+        </footer>
+    </div>
+    <!-- Carga de la libreria Javascript de Bootstrap para componentes interactivos -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Carga del archivo de logica personalizada para el sitio web -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

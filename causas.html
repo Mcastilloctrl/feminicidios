@@ -1,0 +1,105 @@
+<!-- Declara el tipo de documento HTML5 -->
+<!DOCTYPE html>
+<!-- Define el lenguaje español para el contenido del documento -->
+<html lang="es">
+<head>
+    <!-- Establece la codificacion de caracteres estandar UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Configura la visualizacion para dispositivos moviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define el titulo de la pagina sobre causas -->
+    <title>Causas - Proyecto RD</title>
+    <!-- Importa los estilos de Bootstrap 5 desde una fuente externa -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Importa la hoja de estilos personalizada del proyecto -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Contenedor general con espaciado lateral optimizado -->
+    <div class="container-fluid px-lg-5">
+        <!-- Area de encabezado con diseño flexible y centrado vertical -->
+        <header class="navbar-custom d-flex justify-content-between align-items-center">
+            <!-- Boton interactivo para el menu en dispositivos moviles -->
+             <button class="mobile-toggle" aria-label="Menu">
+                <!-- Icono representativo de hamburguesa en formato vectorial -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+            <!-- Barra de navegacion con enlaces a las secciones del sitio -->
+            <nav class="nav-pill d-none d-lg-flex">
+                <!-- Enlace a la pagina de inicio -->
+                <a href="index.html">Inicio</a>
+                <!-- Elemento decorativo de separacion -->
+                <span class="text-muted">•</span>
+                <!-- Enlace a los conceptos base -->
+                <a href="definicion.html">¿Qué es?</a>
+                <!-- Elemento decorativo de separacion -->
+                <span class="text-muted">•</span>
+                <!-- Seccion actual resaltada sobre las causas -->
+                <a href="causas.html" class="active">Causas</a>
+                <!-- Elemento decorativo de separacion -->
+                <span class="text-muted">•</span>
+                <!-- Enlace a la informacion especifica de RD -->
+                <a href="rd.html">En RD</a>
+                <!-- Elemento decorativo de separacion -->
+                <span class="text-muted">•</span>
+                <!-- Enlace a los metodos de prevencion -->
+                <a href="prevencion.html">Prevención</a>
+                <!-- Elemento decorativo de separacion -->
+                <span class="text-muted">•</span>
+                <!-- Enlace a la informacion de contacto -->
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </header>
+
+        <!-- Cabecera de la seccion con titulo principal y boton de avance -->
+        <div class="d-flex justify-content-between align-items-end mb-5">
+            <!-- Titulo descriptivo de los factores analizados -->
+            <h1 class="display-1 fw-900 m-0" style="font-weight: 900; text-transform: uppercase;">FACTORES</h1>
+            <!-- Boton para ir a la siguiente pagina de datos en RD -->
+            <a href="rd.html" class="btn btn-light rounded-pill px-4 py-3 fw-800 shadow-sm" style="background: #f1f5f9; font-weight: 800; text-decoration: none; color: black;">
+                REALIDAD EN RD <span class="ms-2">→</span>
+            </a>
+        </div>
+
+        <!-- Cuerpo principal con diseño de cuadricula bento -->
+        <main class="bento-grid">
+            <!-- Tarjeta destacada hero con imagen y titulo lateral -->
+            <div class="grid-item hero-card" style="grid-column: span 7; height: 500px;">
+                <!-- Imagen representativa de las causas estructurales -->
+                <img src="imagenes/foto2.jpg.jpg" class="full-img" alt="Causas Feminicidio">
+                <!-- Capa de texto sobrepuesta en la esquina de la imagen -->
+                <div class="hero-notch">
+                    <div class="ps-5">
+                        <!-- Etiqueta de clasificacion del tema -->
+                        <span class="text-label">Raíz . Problema</span>
+                        <!-- Titulo principal sobre el machismo estructural -->
+                        <h2>MACHISMO <br>ESTRUCTURAL</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta con fondo de advertencia sobre la impunidad -->
+            <div class="grid-item action-card" style="grid-column: span 5; background: #fee2e2; padding: 50px;">
+                <!-- Titulo destacado sobre el problema de la impunidad -->
+                <h3 style="color: #991b1b; font-size: 2.5rem;">IMPUNIDAD</h3>
+                <!-- Texto explicativo sobre el fallo sistematico -->
+                <p class="mt-4 fw-800" style="font-size: 1.2rem;">Cuando el sistema falla en sancionar, el agresor se siente validado para continuar el ciclo de violencia.</p>
+                <!-- Detalle adicional al pie de la tarjeta -->
+                <div class="mt-auto pt-4 border-top">
+                     <!-- Mensaje sobre la importancia de la respuesta judicial -->
+                     <p class="small fw-600 text-muted">La falta de respuesta judicial es un factor determinante en la repetición de las agresiones.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Pie de pagina centrado con nombre del proyecto -->
+        <footer class="mt-5 pt-5 border-top text-center pb-5">
+            <!-- Creditos finales informativos -->
+            <p class="font-bold fw-800">PROYECTO EDUCATIVO RD</p>
+        </footer>
+    </div>
+    <!-- Script de funcionalidades de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script personalizado del sitio web -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
