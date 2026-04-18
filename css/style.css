@@ -61,6 +61,18 @@ body {
     margin: 0 auto;
     /* Ajusta el ancho al contenido interno */
     width: fit-content;
+    /* Asegura que este por encima de otros elementos */
+    z-index: 2000;
+}
+
+/* Estilo para el logo o boton de inicio */
+.nav-logo {
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--dark-blue);
+    letter-spacing: -1px;
+    text-transform: uppercase;
 }
 
 /* Estilo de los enlaces dentro del menu de navegacion */
@@ -460,15 +472,37 @@ body {
 /* Ajustes responsivos para telefonos moviles y pantallas pequeñas */
 @media (max-width: 768px) {
     /* Estilo flotante para el menu movil cuando se despliega */
-    .nav-pill { width: 95%; background: white; border-radius: 20px; position: fixed; top: 10px; left: 2.5%; padding: 10px; display: none; }
+    .nav-pill { 
+        width: 90%; 
+        background: white; 
+        border-radius: 20px; 
+        position: fixed; 
+        top: 80px; 
+        left: 5%; 
+        padding: 20px; 
+        display: none; 
+        flex-direction: column;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        border: 1px solid #eee;
+    }
     /* Muestra el menu cuando tiene la clase activa */
-    .nav-pill.show { display: flex; flex-direction: column; }
+    .nav-pill.show { display: flex; }
+    /* Estilos para los enlaces en version movil */
+    .nav-pill a { width: 100%; text-align: center; padding: 15px; }
+    /* Oculta los separadores en movil */
+    .nav-pill .text-muted { display: none; }
+    /* Oculta acciones extras en movil para simplificar */
+    .nav-actions { display: none; }
+
     /* Posiciona el boton de menu siempre a la vista */
-    .mobile-toggle { display: block; position: fixed; top: 20px; right: 20px; z-index: 1000; background: white; padding: 10px; border-radius: 50%; }
+    .mobile-toggle { display: block; background: white; padding: 10px; border-radius: 50%; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #eee; }
+    
     /* Cambia la cuadricula a una sola columna vertical */
     .bento-grid { grid-template-columns: 1fr; }
     /* Expande todas las tarjetas al ancho completo de la pantalla */
     .hero-card, .lime-card, .blue-card, .video-card, .category-card { grid-column: span 1; grid-row: auto; height: auto; min-height: 400px; }
     /* Elimina el efecto de recorte hero en movil para mejor lectura */
     .hero-notch { width: 100%; border-radius: 0; padding: 30px; }
+    /* Ajusta el tamaño de los titulos en movil */
+    h1.display-1 { font-size: 3rem; }
 }
