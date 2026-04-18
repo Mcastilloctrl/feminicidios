@@ -74,6 +74,13 @@
             }
             .btn-premium, .input-premium {
                 grid-column: span 1;
+                padding: 15px; /* Reduccion de espaciado interno */
+            }
+            .hero-card-contact {
+                padding: 30px 20px !important; /* Reduccion de margen exterior */
+            }
+            .contact-title {
+                font-size: 2rem !important; /* Titulo mas pequeño */
             }
         }
     </style>
@@ -91,7 +98,7 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </button>
             <!-- Lista de enlaces de navegacion principal del sitio -->
-            <nav class="nav-pill d-none d-lg-flex">
+            <nav class="nav-pill">
                 <!-- Enlace de retorno a la pagina principal -->
                 <a href="index.html">Inicio</a>
                 <!-- Separador estetico entre los elementos del menu -->
@@ -124,9 +131,9 @@
         <!-- Area principal de contenido con diseño de cuadricula bento -->
         <main class="bento-grid">
             <!-- Tarjeta hero que contiene el formulario de contacto principal -->
-            <div class="grid-item hero-card" style="grid-column: span 12; padding: 60px; height: auto;">
+            <div class="grid-item hero-card hero-card-contact" style="grid-column: span 12; padding: 60px; height: auto;">
                  <!-- Titulo secundario con mensaje de bienvenida al usuario -->
-                 <h2 class="font-bold mb-4 text-uppercase" style="font-size: 3rem; font-weight: 900;">TE ESCUCHAMOS</h2>
+                 <h2 class="font-bold mb-4 text-uppercase contact-title" style="font-size: 3rem; font-weight: 900;">TE ESCUCHAMOS</h2>
                  <!-- Formulario interactivo con campos de entrada optimizados -->
                  <form class="contact-form-premium">
                     <!-- Campo para el ingreso del nombre del interesado -->

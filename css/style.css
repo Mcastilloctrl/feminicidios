@@ -453,6 +453,8 @@ body {
     display: none;
     /* Sin fondo predeterminado */
     background: none;
+    /* Z-index para estar por encima del menu */
+    z-index: 2100;
     /* Sin bordes de boton */
     border: none;
     /* Cambia el cursor al pasar por encima */
